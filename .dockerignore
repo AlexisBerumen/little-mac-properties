@@ -1,0 +1,5 @@
+.git
+.openai
+.package-stage*
+*.tar.gz
+README.md
