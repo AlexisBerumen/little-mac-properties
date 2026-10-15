@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/brand.css" />
     <link rel="stylesheet" href="assets/redesign.css" />
     <link rel="stylesheet" href="assets/draft.css" />
+    <link rel="stylesheet" href="assets/gallery.css" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -26,6 +27,7 @@
         <a href="#viviendas">Viviendas</a>
         <a href="#rentas">Rentas</a>
         <a href="#yardas">Yardas</a>
+        <a href="#galeria">Galería</a>
         <a href="#proceso">Cómo funciona</a>
       </nav>
       <a class="header-cta" href="#contacto">Hablemos <span>↗</span></a>
@@ -67,6 +69,24 @@
           <a href="#viviendas" class="pathway"><span>01 · Vivienda</span><h3>Quiero comprar</h3><p>Busco una casa para establecerme o dar mi siguiente paso.</p><b>Ver compra de vivienda →</b></a>
           <a href="#rentas" class="pathway"><span>02 · Vivienda</span><h3>Quiero rentar</h3><p>Necesito un hogar que se ajuste a mi momento actual.</p><b>Ver renta de vivienda →</b></a>
           <a href="#yardas" class="pathway pathway-dark"><span>03 · Espacio operativo</span><h3>Necesito una yarda</h3><p>Quiero comprar o rentar espacio para equipo, operación o almacenamiento.</p><b>Ver opciones de yardas →</b></a>
+        </div>
+      </section>
+
+      <section class="gallery section-padding" id="galeria" aria-labelledby="gallery-title">
+        <div class="gallery-heading"><p class="eyebrow rust">Galería de presentación</p><h2 id="gallery-title">Imagina el tipo de espacio <em>que buscas.</em></h2><p>Estas imágenes son referencias visuales para esta presentación. No representan propiedades disponibles ni condiciones de venta o renta.</p></div>
+        <div class="gallery-grid">
+          <button class="gallery-card" type="button" data-gallery-image="assets/reference-home-buy.png" data-gallery-title="Referencia · Vivienda para compra" data-gallery-caption="Ejemplo visual de una vivienda residencial. Disponibilidad y detalles se confirman directamente con Little Mac.">
+            <img src="assets/reference-home-buy.png" alt="Ejemplo de una vivienda residencial de estilo suroeste" />
+            <span class="gallery-card-copy"><small>01 · Compra de vivienda</small><strong>Ver referencia <b>↗</b></strong></span>
+          </button>
+          <button class="gallery-card gallery-card-tall" type="button" data-gallery-image="assets/reference-home-rent.png" data-gallery-title="Referencia · Vivienda en renta" data-gallery-caption="Ejemplo visual de un interior residencial. Este material no representa una unidad disponible.">
+            <img src="assets/reference-home-rent.png" alt="Ejemplo de un interior residencial luminoso" />
+            <span class="gallery-card-copy"><small>02 · Renta de vivienda</small><strong>Ver referencia <b>↗</b></strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/reference-yard.png" data-gallery-title="Referencia · Yarda para compra o renta" data-gallery-caption="Ejemplo visual de un espacio cercado. Dimensiones, uso y disponibilidad se confirman directamente con Little Mac.">
+            <img src="assets/reference-yard.png" alt="Ejemplo de una yarda cercada con espacio abierto" />
+            <span class="gallery-card-copy"><small>03 · Venta y renta de yardas</small><strong>Ver referencia <b>↗</b></strong></span>
+          </button>
         </div>
       </section>
 
@@ -134,6 +154,13 @@
       </section>
     </main>
 
+    <dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title">
+      <form method="dialog"><button class="dialog-close" aria-label="Cerrar imagen">×</button></form>
+      <img id="gallery-dialog-image" src="" alt="" />
+      <div><p class="eyebrow rust" id="gallery-dialog-title"></p><p id="gallery-dialog-caption"></p></div>
+    </dialog>
+
     <footer><a class="brand" href="#inicio"><img class="brand-logo" src="assets/little-mac-logo.png" alt="Logotipo Little Mac Properties LLC" /><span>Little Mac<small>Properties LLC · Hobbs, NM</small></span></a><p>Hogares y yards, con perspectiva local.</p><a href="#inicio" class="back-top">Volver arriba ↑</a></footer>
+    <script src="assets/gallery.js"></script>
   </body>
 </html>
