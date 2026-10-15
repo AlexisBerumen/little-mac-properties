@@ -7,6 +7,7 @@
     '.pathways-heading .eyebrow', '.pathways-heading h2', '.pathways-heading>p:last-child', '.pathway span', '.pathway h3', '.pathway p', '.pathway b',
     '.services .service-card .eyebrow', '.services .service-card h2', '.services .service-copy', '.services .button',
     '.gallery-heading .eyebrow', '.gallery-heading h2', '.gallery-heading>p:last-child', '.gallery-card-copy small', '.gallery-card-copy strong',
+    '.featured-yard .eyebrow', '.featured-yard h2', '.featured-yard-heading>p', '.yard-gallery-main small', '.yard-gallery-main strong', '.yard-status', '.yard-features li', '.yard-contact-label', '.yard-actions a',
     '.sample-gallery-heading .eyebrow', '.sample-gallery-heading h2', '.sample-gallery-heading>p:last-child', '.sample-listing span', '.sample-listing h3', '.sample-listing p', '.sample-open',
     '.process-header .eyebrow', '.process-header h2', '.steps h3', '.steps p', '.details-intro .eyebrow', '.details-intro h2', '.details-intro>p:last-child', '.detail-list span', '.detail-list p',
     '.faq .eyebrow', '.faq h2', '.faq summary', '.faq details p', '.contact .eyebrow', '.contact h2', '.contact>p:not(.eyebrow):not(.demo-note)', '.contact .button-rust', '.contact .demo-note', 'footer p', '.back-top'
@@ -44,6 +45,15 @@
     '.gallery-heading>p:last-child': 'These images are visual references for this presentation. They do not represent available properties or sale and rental terms.',
     '.gallery-card-copy small': ['01 · Home buying', '02 · Home rentals', '03 · Yard sales & rentals'],
     '.gallery-card-copy strong': ['View reference <b>↗</b>', 'View reference <b>↗</b>', 'View reference <b>↗</b>'],
+    '.featured-yard .eyebrow': 'Available now · Hobbs, NM',
+    '.featured-yard h2': 'Commercial yard<br /><em>ready for operations.</em>',
+    '.featured-yard-heading>p': 'A real rental option for contractors, equipment storage, and truck or trailer parking.',
+    '.yard-gallery-main small': 'Property gallery',
+    '.yard-gallery-main strong': 'View all 3 photos <b>↗</b>',
+    '.yard-status': '3 acres · level lot · fenced',
+    '.yard-features li': ['Gravel surface', 'Truck & trailer access', 'Ideal for equipment, materials, or fleet parking', 'Water, drainage, and electricity', 'High visibility'],
+    '.yard-contact-label': 'Check availability or schedule a visit:',
+    '.yard-actions a': ['Call (575) 602-8120 <span>→</span>', '(575) 665-8547', 'Send email'],
     '.sample-gallery-heading .eyebrow': 'Sample property cards',
     '.sample-gallery-heading h2': 'A closer look, <em>without assuming availability.</em>',
     '.sample-gallery-heading>p:last-child': 'Each card opens a short presentation gallery. These are visual examples: not listings, not priced, and not real properties.',
@@ -66,9 +76,9 @@
     '.faq details p': ['This draft presents home buying and rentals, along with yard sales and rentals in Hobbs, NM.', 'Inventory and terms are confirmed directly with Little Mac; this presentation does not show example listings or prices.', 'Yes. The first conversation helps us understand your plan and guide the search or type of space that may work for you.'],
     '.contact .eyebrow': 'Little Mac · Hobbs, NM',
     '.contact h2': 'Shall we start<br /><em>with a conversation?</em>',
-    '.contact>p:not(.eyebrow):not(.demo-note)': 'Tell us whether you want to buy, rent a home, or buy/rent a yard. We’ll help you identify the right next step.',
-    '.contact .button-rust': 'Email Little Mac <span>→</span>',
-    '.contact .demo-note': 'Sample contact — replace with real phone, email, and social links before publishing the final version.',
+    '.contact>p:not(.eyebrow):not(.demo-note)': 'Tell us whether you want to buy, rent a home, or rent a yard. We’ll help you identify the right next step.',
+    '.contact .button-rust': 'Call Little Mac <span>→</span>',
+    '.contact .demo-note': 'Direct contact for available homes and yards.',
     'footer p': 'Homes and yards, with a local perspective.',
     '.back-top': 'Back to top ↑'
   };
@@ -77,6 +87,7 @@
     ['Reference · Home buying', 'Visual example of a residential home. Availability and details are confirmed directly with Little Mac.'],
     ['Reference · Home rentals', 'Visual example of a residential interior. This material does not represent an available unit.'],
     ['Reference · Yard purchase or rental', 'Visual example of a fenced yard. Dimensions, use, and availability are confirmed directly with Little Mac.'],
+    ['Commercial yard for rent · Hobbs, NM', 'Available 3-acre property. Confirm availability, terms, and a visit directly with Little Mac.'],
     ['Sample home 01', 'Sample gallery for home buying. The images are visual references and do not represent an available property.'],
     ['Sample home 02', 'Sample gallery for home rentals. The images are visual references and do not represent an available unit.'],
     ['Sample yard 01', 'Sample gallery for a yard. Dimensions, use, and availability are confirmed directly with Little Mac.']
@@ -87,11 +98,12 @@
     card.dataset.enGalleryCaption = caption || '';
   });
 
-  const imageAlts = [...document.querySelectorAll('.gallery-card img, .sample-listing > img')].map((image) => image.alt);
+  const imageAlts = [...document.querySelectorAll('.gallery-card img, .featured-yard img, .sample-listing > img')].map((image) => image.alt);
   const englishImageAlts = [
     'Modern residential home with a landscaped front yard',
     'Bright living room in a rental-style home',
     'Fenced operational yard with wide access',
+    'Gated access to the fenced commercial yard in Hobbs',
     'Sample home exterior for a buying conversation',
     'Sample home interior for a rental conversation',
     'Sample operational yard with equipment access'
@@ -110,12 +122,12 @@
       const nodes = [...document.querySelectorAll(selector)];
       nodes.forEach((node, index) => { node.innerHTML = isEnglish ? (Array.isArray(value) ? value[index] : value) : originals.get(node); });
     });
-    document.querySelectorAll('.gallery-card img, .sample-listing > img').forEach((image, index) => {
+    document.querySelectorAll('.gallery-card img, .featured-yard img, .sample-listing > img').forEach((image, index) => {
       image.alt = isEnglish ? englishImageAlts[index] : imageAlts[index];
     });
     if (navigation) navigation.setAttribute('aria-label', isEnglish ? 'Main navigation' : 'Navegación principal');
     if (skipLink) skipLink.textContent = isEnglish ? 'Skip to content' : 'Ir al contenido';
-    if (contactButton) contactButton.setAttribute('href', isEnglish ? 'mailto:hello@littlemacproperties.com?subject=Little%20Mac%20inquiry' : spanishContactHref);
+    if (contactButton) contactButton.setAttribute('href', isEnglish ? 'tel:+15756028120' : spanishContactHref);
     document.querySelectorAll('[data-language]').forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
     localStorage.setItem('little-mac-language', language);
   };

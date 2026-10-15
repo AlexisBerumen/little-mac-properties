@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/draft.css" />
     <link rel="stylesheet" href="assets/gallery.css" />
     <link rel="stylesheet" href="assets/sample-gallery.css" />
+    <link rel="stylesheet" href="assets/featured-yard.css" />
     <link rel="stylesheet" href="assets/i18n.css" />
   </head>
   <body>
@@ -28,7 +29,7 @@
         <a href="#ruta">Tu ruta</a>
         <a href="#viviendas">Viviendas</a>
         <a href="#rentas">Rentas</a>
-        <a href="#yardas">Yardas</a>
+        <a href="#yard-disponible">Yardas</a>
         <a href="#galeria">Galería</a>
         <a href="#proceso">Cómo funciona</a>
       </nav>
@@ -71,7 +72,7 @@
         <div class="pathways-grid">
           <a href="#viviendas" class="pathway"><span>01 · Vivienda</span><h3>Quiero comprar</h3><p>Busco una casa para establecerme o dar mi siguiente paso.</p><b>Ver compra de vivienda →</b></a>
           <a href="#rentas" class="pathway"><span>02 · Vivienda</span><h3>Quiero rentar</h3><p>Necesito un hogar que se ajuste a mi momento actual.</p><b>Ver renta de vivienda →</b></a>
-          <a href="#yardas" class="pathway pathway-dark"><span>03 · Espacio operativo</span><h3>Necesito una yarda</h3><p>Quiero comprar o rentar espacio para equipo, operación o almacenamiento.</p><b>Ver opciones de yardas →</b></a>
+          <a href="#yard-disponible" class="pathway pathway-dark"><span>03 · Espacio operativo</span><h3>Necesito una yarda</h3><p>Quiero comprar o rentar espacio para equipo, operación o almacenamiento.</p><b>Ver opciones de yardas →</b></a>
         </div>
       </section>
 
@@ -90,6 +91,27 @@
             <img src="assets/reference-yard.png" alt="Ejemplo de una yarda cercada con espacio abierto" />
             <span class="gallery-card-copy"><small>03 · Venta y renta de yardas</small><strong>Ver referencia <b>↗</b></strong></span>
           </button>
+        </div>
+      </section>
+
+      <section class="featured-yard section-padding" id="yard-disponible" aria-labelledby="yard-feature-title">
+        <div class="featured-yard-heading">
+          <div><p class="eyebrow sand">Disponible ahora · Hobbs, NM</p><h2 id="yard-feature-title">Yarda comercial<br /><em>lista para operar.</em></h2></div>
+          <p>Una opción real de renta para contratistas, almacenamiento de equipo y estacionamiento de camiones o remolques.</p>
+        </div>
+        <div class="featured-yard-grid">
+          <button class="yard-gallery-main" type="button" data-gallery-images="assets/hobbs-yard-gate.jpeg|assets/hobbs-yard-front.jpeg|assets/hobbs-yard-sign.jpeg" data-gallery-title="Yarda comercial en renta · Hobbs, NM" data-gallery-caption="Propiedad disponible para renta. Confirma disponibilidad, condiciones y visita directamente con Little Mac.">
+            <img src="assets/hobbs-yard-gate.jpeg" alt="Portón de acceso de la yarda comercial cercada en Hobbs" />
+            <span><small>Galería de la propiedad</small><strong>Ver las 3 fotos <b>↗</b></strong></span>
+          </button>
+          <div class="yard-details">
+            <p class="yard-status">3 acres · terreno plano · cercado</p>
+            <ul class="yard-features">
+              <li>Superficie de grava</li><li>Acceso para camiones y remolques</li><li>Ideal para equipo, materiales o flotilla</li><li>Agua, drenaje y luz</li><li>Alta visibilidad</li>
+            </ul>
+            <p class="yard-contact-label">Consulta disponibilidad o agenda una visita:</p>
+            <div class="yard-actions"><a href="tel:+15756028120">Llamar (575) 602-8120 <span>→</span></a><a href="tel:+15756658547">(575) 665-8547</a><a href="mailto:aux1@cctrsnm.com?subject=Consulta%20de%20yarda%20comercial">Enviar correo</a></div>
+          </div>
         </div>
       </section>
 
@@ -169,9 +191,10 @@
         <div class="contact-sun" aria-hidden="true"></div>
         <p class="eyebrow">Little Mac · Hobbs, NM</p>
         <h2>¿Empezamos<br /><em>por una plática?</em></h2>
-        <p>Cuéntanos si buscas comprar, rentar una vivienda o comprar/rentar una yarda. Te responderemos con el siguiente paso correcto.</p>
-        <a class="button button-rust" href="mailto:hello@littlemac.example?subject=Consulta%20para%20Little%20Mac">Escribir a Little Mac <span>→</span></a>
-        <p class="demo-note">Contacto de muestra — sustituir por teléfono, correo y enlaces reales antes de publicar la versión final.</p>
+        <p>Cuéntanos si buscas comprar, rentar una vivienda o rentar una yarda. Te responderemos con el siguiente paso correcto.</p>
+        <a class="button button-rust" href="tel:+15756028120">Llamar a Little Mac <span>→</span></a>
+        <a class="contact-secondary" href="mailto:aux1@cctrsnm.com?subject=Consulta%20para%20Little%20Mac">aux1@cctrsnm.com</a>
+        <p class="demo-note">Contacto directo para propiedades y yardas disponibles.</p>
       </section>
     </main>
 
