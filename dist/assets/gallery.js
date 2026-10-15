@@ -22,8 +22,9 @@
   const openGallery = (card) => {
     images = card.dataset.galleryImages ? card.dataset.galleryImages.split('|') : [card.dataset.galleryImage];
     activeIndex = 0;
-    title.textContent = card.dataset.galleryTitle || '';
-    caption.textContent = card.dataset.galleryCaption || '';
+    const english = document.documentElement.lang === 'en';
+    title.textContent = (english ? card.dataset.enGalleryTitle : card.dataset.galleryTitle) || '';
+    caption.textContent = (english ? card.dataset.enGalleryCaption : card.dataset.galleryCaption) || '';
     render();
     dialog.showModal();
   };
