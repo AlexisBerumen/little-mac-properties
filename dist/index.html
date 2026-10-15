@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/redesign.css" />
     <link rel="stylesheet" href="assets/draft.css" />
     <link rel="stylesheet" href="assets/gallery.css" />
+    <link rel="stylesheet" href="assets/sample-gallery.css" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -90,6 +91,24 @@
         </div>
       </section>
 
+      <section class="sample-gallery section-padding" id="ejemplos" aria-labelledby="samples-title">
+        <div class="sample-gallery-heading"><p class="eyebrow rust">Fichas de ejemplo</p><h2 id="samples-title">Un vistazo más cerca, <em>sin suponer disponibilidad.</em></h2><p>Cada ficha abre una mini galería de presentación. Son muestras visuales: no son anuncios, no incluyen precio y no representan propiedades reales.</p></div>
+        <div class="sample-listings">
+          <article class="sample-listing">
+            <img src="assets/reference-home-buy.png" alt="Muestra de vivienda residencial" />
+            <div><span>Vivienda de presentación 01</span><h3>Compra de vivienda</h3><p>Exterior e interior de muestra para visualizar el tipo de conversación que podemos iniciar.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-home-buy.png|assets/sample-buy-detail.png" data-gallery-title="Vivienda de presentación 01" data-gallery-caption="Galería de muestra para compra de vivienda. Las imágenes son referencias visuales y no representan una propiedad disponible.">Abrir galería <b>→</b></button></div>
+          </article>
+          <article class="sample-listing">
+            <img src="assets/reference-home-rent.png" alt="Muestra de interior de vivienda en renta" />
+            <div><span>Vivienda de presentación 02</span><h3>Renta de vivienda</h3><p>Sala y habitación de muestra para presentar posibilidades de una vivienda en renta.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-home-rent.png|assets/sample-rent-detail.png" data-gallery-title="Vivienda de presentación 02" data-gallery-caption="Galería de muestra para renta de vivienda. Las imágenes son referencias visuales y no representan una unidad disponible.">Abrir galería <b>→</b></button></div>
+          </article>
+          <article class="sample-listing sample-listing-yard">
+            <img src="assets/reference-yard.png" alt="Muestra de yarda cercada" />
+            <div><span>Yarda de presentación 01</span><h3>Venta o renta de yarda</h3><p>Espacio y acceso de muestra para explicar las necesidades operativas a considerar.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-yard.png|assets/sample-yard-detail.png" data-gallery-title="Yarda de presentación 01" data-gallery-caption="Galería de muestra para una yarda. Las dimensiones, uso y disponibilidad se confirman directamente con Little Mac.">Abrir galería <b>→</b></button></div>
+          </article>
+        </div>
+      </section>
+
       <section class="services" aria-label="Servicios de Little Mac">
         <article class="service-card home-card" id="viviendas">
           <div class="service-number">01</div>
@@ -156,8 +175,8 @@
 
     <dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title">
       <form method="dialog"><button class="dialog-close" aria-label="Cerrar imagen">×</button></form>
-      <img id="gallery-dialog-image" src="" alt="" />
-      <div><p class="eyebrow rust" id="gallery-dialog-title"></p><p id="gallery-dialog-caption"></p></div>
+      <div class="dialog-media"><img id="gallery-dialog-image" src="" alt="" /><button class="dialog-nav dialog-prev" type="button" aria-label="Imagen anterior">←</button><button class="dialog-nav dialog-next" type="button" aria-label="Imagen siguiente">→</button></div>
+      <div><p class="eyebrow rust" id="gallery-dialog-title"></p><p id="gallery-dialog-caption"></p><small class="dialog-count" id="gallery-dialog-count"></small></div>
     </dialog>
 
     <footer><a class="brand" href="#inicio"><img class="brand-logo" src="assets/little-mac-logo.png" alt="Logotipo Little Mac Properties LLC" /><span>Little Mac<small>Properties LLC · Hobbs, NM</small></span></a><p>Hogares y yards, con perspectiva local.</p><a href="#inicio" class="back-top">Volver arriba ↑</a></footer>
