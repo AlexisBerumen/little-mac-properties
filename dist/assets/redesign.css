@@ -1,0 +1,42 @@
+:root {
+  --ink: #071d41;
+  --cream: #f7f9fc;
+  --sand: #dce9f8;
+  --rust: #0d4f93;
+  --orange: #f6a623;
+  --sage: #7da7d9;
+}
+
+.site-header { border-bottom: 1px solid #d7e1ee; }
+.header-cta { background: #0b4d91; }
+.header-cta span { color: #f6a623; }
+.hero-wash { background: linear-gradient(90deg, rgba(4, 24, 57, .93), rgba(4, 24, 57, .67) 45%, rgba(4, 24, 57, .14) 78%), linear-gradient(0deg, rgba(5, 20, 46, .3), transparent 48%); }
+.button-light { color: #08234c; background: #fff; }
+.button-light span { color: #0d5cab; }
+.hero-note { color: #e3efff; }
+.pulse { background: #f6a623; }
+.intro { background: linear-gradient(135deg, #f7f9fc, #eaf3ff); }
+.rust { color: #0d5cab; }
+.services { grid-template-columns: repeat(3, 1fr); }
+.service-card { min-height: 630px; }
+.home-card { background: #d9e8f8; }
+.rental-card { background: #f7f9fc; border-top: 1px solid #d5e2f0; }
+.yard-card { background: #071d41; }
+.service-card .eyebrow { color: #0d4f93; }
+.yard-card .sand { color: #9ac5fa; }
+.button-dark, .button-blue { background: #0b4d91; color: #fff; }
+.button-light-outline { border-color: #9ac5fa; }
+.house, .house:before, .house span, .house i, .house b { border-color: #6b9ed4; }
+.key { width: 180px; height: 180px; right: -35px; bottom: 20px; border: 16px solid #79aee4; border-radius: 50%; opacity: .52; }
+.key:after { content: ''; position: absolute; width: 155px; height: 28px; background: #79aee4; right: -120px; top: 60px; transform: rotate(-30deg); }
+.key i, .key b { position: absolute; width: 21px; height: 34px; background: #79aee4; right: -98px; top: 80px; transform: rotate(-30deg); }
+.key b { right: -70px; top: 62px; }
+.process { background: #e7f0fb; }
+.steps li { border-color: #afc7e0; }
+.contact { background: #071d41; }
+.contact .eyebrow { color: #9ac5fa; }
+.button-rust { color: #062151; background: #f6a623; }
+.contact-sun, .contact-sun:after, .contact-sun:before { border-color: rgba(150, 197, 250, .32); }
+.brand-logo { box-shadow: 0 0 0 1px #b9cde5; }
+
+@media (max-width: 980px) { .services { grid-template-columns: 1fr; } .service-card { min-height: 500px; } }
