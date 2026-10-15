@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Borrador de Little Mac Properties LLC: viviendas y yardas para venta o renta en Hobbs, Nuevo México." />
+    <meta name="description" content="Borrador de Little Mac Properties LLC: viviendas en renta y yardas para venta o renta en Hobbs, Nuevo México." />
     <title>Little Mac Properties LLC | Borrador</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/gallery.css" />
     <link rel="stylesheet" href="assets/sample-gallery.css" />
     <link rel="stylesheet" href="assets/featured-yard.css" />
+    <link rel="stylesheet" href="assets/service-layout.css" />
     <link rel="stylesheet" href="assets/i18n.css" />
   </head>
   <body>
@@ -27,8 +28,7 @@
       </a>
       <nav aria-label="Navegación principal">
         <a href="#ruta">Tu ruta</a>
-        <a href="#viviendas">Viviendas</a>
-        <a href="#rentas">Rentas</a>
+        <a href="#rentas">Renta de viviendas</a>
         <a href="#yard-disponible">Yardas</a>
         <a href="#galeria">Galería</a>
         <a href="#proceso">Cómo funciona</a>
@@ -44,9 +44,9 @@
         <div class="hero-copy">
           <p class="eyebrow">Bienvenido a Hobbs, Nuevo México</p>
           <h1>Un lugar para hoy.<br /><em>Un plan para mañana.</em></h1>
-          <p class="hero-text">Compra, renta una vivienda o encuentra una yarda para tu operación. Todo empieza con una conversación local.</p>
+          <p class="hero-text">Renta una vivienda o encuentra una yarda para comprar o rentar. Todo empieza con una conversación local.</p>
           <div class="hero-actions">
-            <a class="button button-light" href="#viviendas">Explorar opciones <span>→</span></a>
+            <a class="button button-light" href="#rentas">Ver rentas <span>→</span></a>
             <a class="text-link light" href="#rentas">Quiero rentar <span>↓</span></a>
           </div>
         </div>
@@ -57,12 +57,12 @@
         <p class="eyebrow rust">Tu siguiente lugar empieza aquí</p>
         <div class="intro-grid">
           <h2>El siguiente paso merece <em>un aliado cercano.</em></h2>
-          <div><p>Little Mac es una inmobiliaria local para comprar, rentar o encontrar el espacio operativo que necesitas en Hobbs.</p><a class="text-link" href="#contacto">Conoce a nuestro equipo <span>→</span></a></div>
+          <div><p>Little Mac te ayuda a rentar vivienda y a encontrar yardas para venta o renta en Hobbs.</p><a class="text-link" href="#contacto">Conoce a nuestro equipo <span>→</span></a></div>
         </div>
       </section>
 
       <section class="snapshot" aria-label="Resumen del borrador">
-        <div><span>01</span><strong>Tres formas de avanzar</strong><p>Comprar, rentar o encontrar un espacio operativo.</p></div>
+        <div><span>01</span><strong>Dos formas de avanzar</strong><p>Renta una vivienda o encuentra un espacio operativo.</p></div>
         <div><span>02</span><strong>Atención en Hobbs, NM</strong><p>Una conversación local para orientar tu siguiente paso.</p></div>
         <div><span>03</span><strong>Información por confirmar</strong><p>Inventario, precios y condiciones se comparten directamente.</p></div>
       </section>
@@ -70,26 +70,21 @@
       <section class="pathways section-padding" id="ruta">
         <div class="pathways-heading"><p class="eyebrow rust">Elige tu ruta</p><h2>¿Qué estás buscando <em>hoy?</em></h2><p>Este borrador está organizado alrededor de las conversaciones que queremos tener contigo.</p></div>
         <div class="pathways-grid">
-          <a href="#viviendas" class="pathway"><span>01 · Vivienda</span><h3>Quiero comprar</h3><p>Busco una casa para establecerme o dar mi siguiente paso.</p><b>Ver compra de vivienda →</b></a>
-          <a href="#rentas" class="pathway"><span>02 · Vivienda</span><h3>Quiero rentar</h3><p>Necesito un hogar que se ajuste a mi momento actual.</p><b>Ver renta de vivienda →</b></a>
-          <a href="#yard-disponible" class="pathway pathway-dark"><span>03 · Espacio operativo</span><h3>Necesito una yarda</h3><p>Quiero comprar o rentar espacio para equipo, operación o almacenamiento.</p><b>Ver opciones de yardas →</b></a>
+          <a href="#rentas" class="pathway"><span>01 · Vivienda</span><h3>Quiero rentar</h3><p>Necesito un hogar que se ajuste a mi momento actual.</p><b>Ver renta de vivienda →</b></a>
+          <a href="#yard-disponible" class="pathway pathway-dark"><span>02 · Espacio operativo</span><h3>Necesito una yarda</h3><p>Quiero comprar o rentar espacio para equipo, operación o almacenamiento.</p><b>Ver opciones de yardas →</b></a>
         </div>
       </section>
 
       <section class="gallery section-padding" id="galeria" aria-labelledby="gallery-title">
         <div class="gallery-heading"><p class="eyebrow rust">Galería de presentación</p><h2 id="gallery-title">Imagina el tipo de espacio <em>que buscas.</em></h2><p>Estas imágenes son referencias visuales para esta presentación. No representan propiedades disponibles ni condiciones de venta o renta.</p></div>
         <div class="gallery-grid">
-          <button class="gallery-card" type="button" data-gallery-image="assets/reference-home-buy.png" data-gallery-title="Referencia · Vivienda para compra" data-gallery-caption="Ejemplo visual de una vivienda residencial. Disponibilidad y detalles se confirman directamente con Little Mac.">
-            <img src="assets/reference-home-buy.png" alt="Ejemplo de una vivienda residencial de estilo suroeste" />
-            <span class="gallery-card-copy"><small>01 · Compra de vivienda</small><strong>Ver referencia <b>↗</b></strong></span>
-          </button>
           <button class="gallery-card gallery-card-tall" type="button" data-gallery-image="assets/reference-home-rent.png" data-gallery-title="Referencia · Vivienda en renta" data-gallery-caption="Ejemplo visual de un interior residencial. Este material no representa una unidad disponible.">
             <img src="assets/reference-home-rent.png" alt="Ejemplo de un interior residencial luminoso" />
-            <span class="gallery-card-copy"><small>02 · Renta de vivienda</small><strong>Ver referencia <b>↗</b></strong></span>
+            <span class="gallery-card-copy"><small>01 · Renta de vivienda</small><strong>Ver referencia <b>↗</b></strong></span>
           </button>
           <button class="gallery-card" type="button" data-gallery-image="assets/reference-yard.png" data-gallery-title="Referencia · Yarda para compra o renta" data-gallery-caption="Ejemplo visual de un espacio cercado. Dimensiones, uso y disponibilidad se confirman directamente con Little Mac.">
             <img src="assets/reference-yard.png" alt="Ejemplo de una yarda cercada con espacio abierto" />
-            <span class="gallery-card-copy"><small>03 · Venta y renta de yardas</small><strong>Ver referencia <b>↗</b></strong></span>
+            <span class="gallery-card-copy"><small>02 · Venta y renta de yardas</small><strong>Ver referencia <b>↗</b></strong></span>
           </button>
         </div>
       </section>
@@ -119,12 +114,8 @@
         <div class="sample-gallery-heading"><p class="eyebrow rust">Fichas de ejemplo</p><h2 id="samples-title">Un vistazo más cerca, <em>sin suponer disponibilidad.</em></h2><p>Cada ficha abre una mini galería de presentación. Son muestras visuales: no son anuncios, no incluyen precio y no representan propiedades reales.</p></div>
         <div class="sample-listings">
           <article class="sample-listing">
-            <img src="assets/reference-home-buy.png" alt="Muestra de vivienda residencial" />
-            <div><span>Vivienda de presentación 01</span><h3>Compra de vivienda</h3><p>Exterior e interior de muestra para visualizar el tipo de conversación que podemos iniciar.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-home-buy.png|assets/sample-buy-detail.png" data-gallery-title="Vivienda de presentación 01" data-gallery-caption="Galería de muestra para compra de vivienda. Las imágenes son referencias visuales y no representan una propiedad disponible.">Abrir galería <b>→</b></button></div>
-          </article>
-          <article class="sample-listing">
             <img src="assets/reference-home-rent.png" alt="Muestra de interior de vivienda en renta" />
-            <div><span>Vivienda de presentación 02</span><h3>Renta de vivienda</h3><p>Sala y habitación de muestra para presentar posibilidades de una vivienda en renta.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-home-rent.png|assets/sample-rent-detail.png" data-gallery-title="Vivienda de presentación 02" data-gallery-caption="Galería de muestra para renta de vivienda. Las imágenes son referencias visuales y no representan una unidad disponible.">Abrir galería <b>→</b></button></div>
+            <div><span>Vivienda de presentación 01</span><h3>Renta de vivienda</h3><p>Sala y habitación de muestra para presentar posibilidades de una vivienda en renta.</p><button class="sample-open" type="button" data-gallery-images="assets/reference-home-rent.png|assets/sample-rent-detail.png" data-gallery-title="Vivienda de presentación 01" data-gallery-caption="Galería de muestra para renta de vivienda. Las imágenes son referencias visuales y no representan una unidad disponible.">Abrir galería <b>→</b></button></div>
           </article>
           <article class="sample-listing sample-listing-yard">
             <img src="assets/reference-yard.png" alt="Muestra de yarda cercada" />
@@ -134,16 +125,8 @@
       </section>
 
       <section class="services" aria-label="Servicios de Little Mac">
-        <article class="service-card home-card" id="viviendas">
-          <div class="service-number">01</div>
-          <p class="eyebrow">Compra de vivienda</p>
-          <h2>Encuentra ese<br /><em>sí se siente bien.</em></h2>
-          <p class="service-copy">Desde tu primera visita hasta el momento de las llaves, te acompañamos a buscar una casa que encaje con tus planes.</p>
-          <a class="button button-dark" href="#contacto">Quiero comprar <span>→</span></a>
-          <div class="line-drawing house" aria-hidden="true"><span></span><i></i><b></b></div>
-        </article>
         <article class="service-card rental-card" id="rentas">
-          <div class="service-number">02</div>
+          <div class="service-number">01</div>
           <p class="eyebrow">Renta de vivienda</p>
           <h2>Tu próximo hogar,<br /><em>sin esperar.</em></h2>
           <p class="service-copy">Encuentra una vivienda en renta que haga sentido para tu ritmo, tu familia y el momento en el que estás.</p>
@@ -151,7 +134,7 @@
           <div class="line-drawing key" aria-hidden="true"><i></i><b></b></div>
         </article>
         <article class="service-card yard-card" id="yardas">
-          <div class="service-number">03</div>
+          <div class="service-number">02</div>
           <p class="eyebrow sand">Venta y renta de yardas</p>
           <h2>Un lote que<br /><em>se adapta a ti.</em></h2>
           <p class="service-copy">Explora yardas disponibles para compra o renta: espacios prácticos para almacenamiento, equipo, trabajo u operación.</p>
@@ -172,7 +155,6 @@
       <section class="details section-padding" id="detalles">
         <div class="details-intro"><p class="eyebrow rust">Detalles que se confirman contigo</p><h2>La información correcta, <em>en el momento correcto.</em></h2><p>En lugar de mostrar datos que pueden cambiar, este borrador abre la conversación y deja claro qué revisaremos contigo.</p></div>
         <div class="detail-list">
-          <article><span>Compra de vivienda</span><p>Zona deseada, tipo de hogar, presupuesto y fecha estimada.</p></article>
           <article><span>Renta de vivienda</span><p>Necesidades de espacio, ubicación, duración y fecha de mudanza.</p></article>
           <article><span>Venta o renta de yardas</span><p>Uso previsto, dimensiones requeridas, acceso y horizonte de operación.</p></article>
         </div>
@@ -181,7 +163,7 @@
       <section class="faq section-padding" aria-label="Preguntas frecuentes">
         <div><p class="eyebrow rust">Preguntas frecuentes</p><h2>Claro desde<br /><em>el principio.</em></h2></div>
         <div class="faq-list">
-          <details open><summary>¿Qué ofrece Little Mac?</summary><p>Este borrador presenta compra y renta de vivienda, además de venta y renta de yardas en Hobbs, NM.</p></details>
+          <details open><summary>¿Qué ofrece Little Mac?</summary><p>Little Mac presenta renta de vivienda, además de venta y renta de yardas en Hobbs, NM.</p></details>
           <details><summary>¿Dónde veo propiedades o precios?</summary><p>El inventario y las condiciones se confirman directamente con Little Mac; no se muestran listados ni precios de ejemplo en esta presentación.</p></details>
           <details><summary>¿Puedo pedir ayuda aunque no sepa exactamente qué necesito?</summary><p>Sí. La primera conversación sirve para entender tu plan y orientar la búsqueda o el tipo de espacio que podría funcionarte.</p></details>
         </div>
@@ -191,7 +173,7 @@
         <div class="contact-sun" aria-hidden="true"></div>
         <p class="eyebrow">Little Mac · Hobbs, NM</p>
         <h2>¿Empezamos<br /><em>por una plática?</em></h2>
-        <p>Cuéntanos si buscas comprar, rentar una vivienda o rentar una yarda. Te responderemos con el siguiente paso correcto.</p>
+        <p>Cuéntanos si buscas rentar una vivienda o comprar/rentar una yarda. Te responderemos con el siguiente paso correcto.</p>
         <a class="button button-rust" href="tel:+15756028120">Llamar a Little Mac <span>→</span></a>
         <a class="contact-secondary" href="mailto:aux1@cctrsnm.com?subject=Consulta%20para%20Little%20Mac">aux1@cctrsnm.com</a>
         <p class="demo-note">Contacto directo para propiedades y yardas disponibles.</p>
@@ -204,7 +186,7 @@
       <div><p class="eyebrow rust" id="gallery-dialog-title"></p><p id="gallery-dialog-caption"></p><small class="dialog-count" id="gallery-dialog-count"></small></div>
     </dialog>
 
-    <footer><a class="brand" href="#inicio"><img class="brand-logo" src="assets/little-mac-logo.png" alt="Logotipo Little Mac Properties LLC" /><span>Little Mac<small>Properties LLC · Hobbs, NM</small></span></a><p>Hogares y yards, con perspectiva local.</p><a href="#inicio" class="back-top">Volver arriba ↑</a></footer>
+    <footer><a class="brand" href="#inicio"><img class="brand-logo" src="assets/little-mac-logo.png" alt="Logotipo Little Mac Properties LLC" /><span>Little Mac<small>Properties LLC · Hobbs, NM</small></span></a><p>Viviendas en renta y yardas, con perspectiva local.</p><a href="#inicio" class="back-top">Volver arriba ↑</a></footer>
     <script src="assets/i18n.js"></script>
     <script src="assets/gallery.js"></script>
   </body>

@@ -17,7 +17,7 @@
 .pulse { background: #f6a623; }
 .intro { background: linear-gradient(135deg, #f7f9fc, #eaf3ff); }
 .rust { color: #0d5cab; }
-.services { grid-template-columns: repeat(3, 1fr); }
+.services { grid-template-columns: repeat(2, 1fr); }
 .service-card { min-height: 630px; }
 .home-card { background: #d9e8f8; }
 .rental-card { background: #f7f9fc; border-top: 1px solid #d5e2f0; }
