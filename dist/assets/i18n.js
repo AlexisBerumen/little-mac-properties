@@ -106,6 +106,7 @@
   ];
   const navigation = document.querySelector('.site-header nav');
   const skipLink = document.querySelector('.skip-link');
+  const heroImage = document.querySelector('.hero-image');
   const contactButton = document.querySelector('.contact .button-rust');
   const spanishContactHref = contactButton?.getAttribute('href');
 
@@ -123,6 +124,7 @@
     });
     if (navigation) navigation.setAttribute('aria-label', isEnglish ? 'Main navigation' : 'Navegación principal');
     if (skipLink) skipLink.textContent = isEnglish ? 'Skip to content' : 'Ir al contenido';
+    if (heroImage) heroImage.setAttribute('aria-label', isEnglish ? 'Hobbs, New Mexico welcome sign beneath a blue sky with clouds' : 'Señal de bienvenida de Hobbs, Nuevo México bajo un cielo azul con nubes');
     if (contactButton) contactButton.setAttribute('href', isEnglish ? 'tel:+15756028120' : spanishContactHref);
     document.querySelectorAll('[data-language]').forEach((button) => button.classList.toggle('is-active', button.dataset.language === language));
     localStorage.setItem('little-mac-language', language);

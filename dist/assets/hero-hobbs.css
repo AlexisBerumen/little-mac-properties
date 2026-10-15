@@ -1,0 +1,2 @@
+.hero-image{background-image:url('hero-hobbs-v2.png');background-position:center center}
+@media(max-width:700px){.hero-image{background-position:56% center}}
